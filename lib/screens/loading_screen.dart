@@ -14,6 +14,11 @@ class _LoadingScreenState extends State<LoadingScreen> {
     print(position);
   }
 
+  @override
+  void initState() {
+    super.initState();
+    getLocation();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +26,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            getLocation();
-            //Get the current location
           },
           child: Text('Get Location'),
         ),
